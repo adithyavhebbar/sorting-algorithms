@@ -1,0 +1,16 @@
+<div class="container">
+  <div class="sidepanel">
+    <button class="sortBtn" (click)="sortArray()" [disabled]="btnDisabled">
+      Start
+    </button>
+  </div>
+  <main>
+    <div class="block-container">
+      <div *ngFor="let k of numberArray;let i = index"
+        [ngStyle]="{'background-color': i >= lowIndex && i < pivotIndex ? 'yellow' :'cyan', 'background-color': i < highIndex && i > pivotIndex+1 ? 'purple' :'cyan', height: getHeightofDiv(k), 'background-color': i === pivotIndex ? 'red' :'cyan'}"
+        class="block">
+        <!-- {{i}} -->
+      </div>
+    </div>
+  </main>
+</div>
