@@ -14,6 +14,8 @@ export class SelectionSortComponent implements OnInit {
   highIndex: number = -2;
   btnDisabled = true;
   midIndex: number = -1;
+
+  selectedAlgorithm = 'selection-sort';
   constructor() {
     for (let i = 1; i <= this.n; i++) {
       this.numberArray.push(i);

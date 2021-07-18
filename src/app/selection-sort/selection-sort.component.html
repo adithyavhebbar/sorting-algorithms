@@ -1,9 +1,22 @@
+<mat-toolbar class="toolbar">
+  <mat-toolbar-row>
+    <span>Custom Toolbar</span>
+  </mat-toolbar-row>
+
+  <mat-toolbar-row>
+    <span>Second Line</span>
+
+  </mat-toolbar-row>
+</mat-toolbar>
 <div class="container">
-  <div class="sidepanel">
+  <!-- <div class="sidepanel">
     <button class="sortBtn" (click)="sortArray()" [disabled]="btnDisabled">
       Start
     </button>
-  </div>
+    <div class="selectedAlgo">
+        <p>{{selectedAlgorithm}}</p>
+    </div>
+  </div> -->
   <main>
     <div class="block-container">
       <div *ngFor="let k of numberArray;let i = index"

@@ -52,3 +52,22 @@ main {
   letter-spacing: 2.5px;
   font-size: 15px;
 }
+
+.selectedAlgo {
+    grid-row-start: 6;
+    grid-column-start: 3;
+    grid-column-end: 4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    letter-spacing: 2.5px;
+    font-size: larger;
+    font-weight: bold;
+}
+
+.toolbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

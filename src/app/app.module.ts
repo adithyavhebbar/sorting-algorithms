@@ -9,6 +9,10 @@ import { InsertionSortComponent } from './insertion-sort/insertion-sort.componen
 import { MergeSortComponent } from './merge-sort/merge-sort.component';
 import { SelectionSortComponent } from './selection-sort/selection-sort.component';
 import { HeapSortComponent } from './heap-sort/heap-sort.component';
+import { BubbleSortComponent } from './bubble-sort/bubble-sort.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MaterialModule } from "./shared/material.module";
+import { MatToolbarModule } from '@angular/material/toolbar';
 
 @NgModule({
   declarations: [
@@ -18,11 +22,15 @@ import { HeapSortComponent } from './heap-sort/heap-sort.component';
     InsertionSortComponent,
     MergeSortComponent,
     SelectionSortComponent,
-    HeapSortComponent
+    HeapSortComponent,
+    BubbleSortComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MaterialModule,
+    MatToolbarModule
   ],
   providers: [],
   bootstrap: [AppComponent]
