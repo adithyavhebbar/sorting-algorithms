@@ -53,7 +53,41 @@ main {
   font-size: 15px;
 }
 
-.sortBtn:disabled {
-  background-color: #1F1B24;
-  color: darkgray;
+.selectedAlgo {
+  grid-row-start: 6;
+  grid-column-start: 3;
+  grid-column-end: 4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  letter-spacing: 2.5px;
+  font-size: larger;
+  font-weight: bold;
+}
+
+.toolbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+mat-slider {
+  width: 300px;
+}
+
+.secondRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+.actionBtn>span {
+  margin: 20px;
+
+}
+
+.algoLink>a {
+  margin: 20px;
 }

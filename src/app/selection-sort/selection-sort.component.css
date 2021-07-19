@@ -71,3 +71,22 @@ main {
     justify-content: center;
     align-items: center;
 }
+
+mat-slider {
+    width: 300px;
+}
+
+.secondRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.actionBtn > span {
+    margin: 20px;
+
+}
+.algoLink > a {
+    margin: 20px;
+}

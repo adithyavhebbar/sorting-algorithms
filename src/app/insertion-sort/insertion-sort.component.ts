@@ -7,7 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InsertionSortComponent implements OnInit {
 
-  n = 350;
+  min = 1;
+  step = 1;
+  max = 100;
+  value = 350;
+
+
+  n = this.value;
   numberArray: number[] = [];
   pivotIndex = -1;
   lowIndex: number = -2;
@@ -20,7 +26,20 @@ export class InsertionSortComponent implements OnInit {
     }
 
   }
+  shuffle() {
+    this.btnDisabled = true;
 
+    for (var i = this.numberArray.length - 1; i > 0; i--) {
+      var j = Math.floor(Math.random() * (i + 1));
+      var temp = this.numberArray[i];
+      this.numberArray[i] = this.numberArray[j];
+      this.numberArray[j] = temp;
+      // await this.sleep(10);
+    }
+
+    this.btnDisabled = false;
+  }
+  
   async shuffleArray(array: number[]) {
 
     this.btnDisabled = true;

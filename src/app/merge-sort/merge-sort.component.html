@@ -1,3 +1,30 @@
+<mat-toolbar>
+  <mat-toolbar-row class="toolbar">
+    <span id="heading">Sorting Visualizer</span>
+  </mat-toolbar-row>
+
+  <mat-toolbar-row class="secondRow">
+    <div class="actionBtn">
+      <span>
+        <button mat-raised-button color="accent" (click)="sortArray()">Sort</button>
+      </span>
+
+      <span>
+        <button mat-raised-button color="accent" (click)="shuffle()">Shuffle</button>
+      </span>
+    </div>
+
+    <div class="algoLink">
+      <a mat-stroked-button color="accent" routerLink="quick-sort">Quick Sort</a>
+      <a mat-stroked-button color="accent" href="https://www.google.com/" target="_blank">Link</a>
+
+      <a mat-stroked-button color="accent" href="https://www.google.com/" target="_blank">Link</a>
+      <a mat-stroked-button color="accent" href="https://www.google.com/" target="_blank">Link</a>
+
+    </div>
+
+  </mat-toolbar-row>
+</mat-toolbar>
 <div class="container">
   <div class="sidepanel">
     <button class="sortBtn" (click)="sortArray()" [disabled]="btnDisabled">

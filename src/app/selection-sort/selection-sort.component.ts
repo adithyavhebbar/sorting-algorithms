@@ -17,10 +17,22 @@ export class SelectionSortComponent implements OnInit {
 
   selectedAlgorithm = 'selection-sort';
   constructor() {
-    for (let i = 1; i <= this.n; i++) {
-      this.numberArray.push(i);
+
+
+  }
+
+  shuffle() {
+    this.btnDisabled = true;
+
+    for (var i = this.numberArray.length - 1; i > 0; i--) {
+      var j = Math.floor(Math.random() * (i + 1));
+      var temp = this.numberArray[i];
+      this.numberArray[i] = this.numberArray[j];
+      this.numberArray[j] = temp;
+      // await this.sleep(10);
     }
 
+    this.btnDisabled = false;
   }
 
   async shuffleArray(array: number[]) {
@@ -45,6 +57,11 @@ export class SelectionSortComponent implements OnInit {
   }
 
   ngOnInit() {
+
+    for (let i = 1; i <= this.n; i++) {
+      this.numberArray.push(i);
+    }
+
     this.shuffleArray(this.numberArray);
   }
 
