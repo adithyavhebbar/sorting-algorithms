@@ -3,7 +3,6 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { SortVisualizerComponent } from './sort-visualizer/sort-visualizer.component';
 import { QuickSortComponent } from './quick-sort/quick-sort.component';
 import { InsertionSortComponent } from './insertion-sort/insertion-sort.component';
 import { MergeSortComponent } from './merge-sort/merge-sort.component';
@@ -17,7 +16,6 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 @NgModule({
   declarations: [
     AppComponent,
-    SortVisualizerComponent,
     QuickSortComponent,
     InsertionSortComponent,
     MergeSortComponent,

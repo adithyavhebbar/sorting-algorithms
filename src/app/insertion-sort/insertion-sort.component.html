@@ -15,11 +15,11 @@
     </div>
 
     <div class="algoLink">
-      <a mat-stroked-button color="accent" routerLink="quick-sort">Quick Sort</a>
-      <a mat-stroked-button color="accent" href="https://www.google.com/" target="_blank">Link</a>
+      <a mat-stroked-button color="accent" routerLink="/quick-sort">Quick Sort</a>
+      <a mat-stroked-button color="accent" routerLink="/merge-sort">Merge Sort</a>
 
-      <a mat-stroked-button color="accent" href="https://www.google.com/" target="_blank">Link</a>
-      <a mat-stroked-button color="accent" href="https://www.google.com/" target="_blank">Link</a>
+      <a mat-stroked-button color="accent" routerLink="/bubble-sort">Bubble Sort</a>
+      <a mat-stroked-button color="accent" routerLink="/selection-sort">Selection Sort</a>
 
     </div>
 
@@ -27,11 +27,6 @@
 </mat-toolbar>
 
 <div class="container">
-  <div class="sidepanel">
-    <button class="sortBtn" (click)="sortArray()" [disabled]="btnDisabled">
-      Start
-    </button>
-  </div>
   <main>
     <div class="block-container">
       <div *ngFor="let k of numberArray;let i = index" [ngStyle]="{'background-color': i >= lowIndex && i < midIndex ? 'yellow' :'cyan', 'background-color' : i <

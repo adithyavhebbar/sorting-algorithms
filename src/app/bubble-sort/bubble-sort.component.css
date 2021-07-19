@@ -12,9 +12,8 @@
   justify-content: center;
   align-items: flex-end;
   margin: 0%;
-  height: calc(90vh - 20px);
-  /* margin-left: 5px; */
-  width: 75rem;
+  height: calc(82vh - 5px);
+  width: calc(94rem + 14px);
 }
 
 main {
@@ -28,30 +27,7 @@ main {
 
 }
 
-.sidepanel {
-  background-color: #1F1B24;
-  color: white;
-  width: 18rem;
-  display: grid;
-  grid-template-columns: auto auto auto auto auto auto;
-  grid-template-rows: 30px 30px 30px 30px 30px 30px 30px;
-}
 
-.sortBtn {
-  grid-column-start: 3;
-  grid-column-end: 4;
-  grid-row-start: 2;
-  grid-row-end: 4;
-  border: none;
-  background-color: #386BFF;
-  color: white;
-  padding: 14px 31px;
-  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
-  cursor: pointer;
-  outline: none;
-  letter-spacing: 2.5px;
-  font-size: 15px;
-}
 
 .selectedAlgo {
   grid-row-start: 6;

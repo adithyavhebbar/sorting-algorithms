@@ -68,25 +68,21 @@ export class BubbleSortComponent implements OnInit {
 
   async sortArray() {
     this.btnDisabled = false;
-    this.selectionSort(this.numberArray).then(() => {
+    this.bubbleSort(this.numberArray).then(() => {
       this.pivotIndex = -1;
       console.log("Finished");
       // this.shuffleArray(this.numberArray);
     })
   }
 
-  async selectionSort(arr: number[]): Promise<void> {
-    let len = arr.length;
-    for (let i = 0; i < len - 1; i++) {
-      let min_index = i;
-      for (let j = i + 1; j < len; j++) {
-        if (arr[j] < arr[min_index]) {
-          min_index = j;
+  async bubbleSort(arr: number[]): Promise<void> {
+    for (let i = 0; i < arr.length; i++) {
+      this.pivotIndex = i;
+      for (let j = i + 1; j < arr.length; j++) {
+        if (arr[i] > arr[j]) {
+          this.swap(i, j);
         }
       }
-      this.pivotIndex = min_index;
-      // console.log("Minimum index:", min_index, ":::", arr[min_index]);
-      await this.swap(i, min_index);
       await this.sleep(10);
     }
   }
@@ -105,7 +101,4 @@ export class BubbleSortComponent implements OnInit {
     this.numberArray[j] = temp;
     // await this.sleep(10);
   }
-
-
-
 }
