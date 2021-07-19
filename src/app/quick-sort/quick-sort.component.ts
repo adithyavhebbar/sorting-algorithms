@@ -20,7 +20,7 @@ export class QuickSortComponent implements OnInit {
 
   }
 
-  shuffle() {
+  async shuffle() {
     this.btnDisabled = true;
 
     for (var i = this.numberArray.length - 1; i > 0; i--) {
@@ -28,7 +28,7 @@ export class QuickSortComponent implements OnInit {
       var temp = this.numberArray[i];
       this.numberArray[i] = this.numberArray[j];
       this.numberArray[j] = temp;
-      // await this.sleep(10);
+      await this.sleep(10);
     }
 
     this.btnDisabled = false;
@@ -63,8 +63,6 @@ export class QuickSortComponent implements OnInit {
   async sortArray() {
     this.btnDisabled = true;
     this.quickSort(this.numberArray, 0, this.numberArray.length - 1).then(() => {
-      console.log('Sorting finished');
-      this.shuffleArray(this.numberArray);
       this.pivotIndex = -1;
       this.btnDisabled = false;
     })
@@ -102,7 +100,7 @@ export class QuickSortComponent implements OnInit {
         await this.swap(j, i)
       }
     }
-    await this.sleep(5);
+    await this.sleep(10);
 
     await this.swap(i + 1, high);
     return i + 1;
@@ -112,7 +110,7 @@ export class QuickSortComponent implements OnInit {
     let temp = this.numberArray[i];
     this.numberArray[i] = this.numberArray[j];
     this.numberArray[j] = temp;
-    await this.sleep(10);
+    await this.sleep(3);
   }
 
 }

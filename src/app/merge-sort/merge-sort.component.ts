@@ -20,7 +20,7 @@ export class MergeSortComponent implements OnInit {
 
   }
 
-  shuffle() {
+  async shuffle() {
     this.btnDisabled = true;
 
     for (var i = this.numberArray.length - 1; i > 0; i--) {
@@ -28,7 +28,7 @@ export class MergeSortComponent implements OnInit {
       var temp = this.numberArray[i];
       this.numberArray[i] = this.numberArray[j];
       this.numberArray[j] = temp;
-      // await this.sleep(10);
+      await this.sleep(10);
     }
 
     this.btnDisabled = false;
@@ -43,7 +43,7 @@ export class MergeSortComponent implements OnInit {
       var temp = array[i];
       array[i] = array[j];
       array[j] = temp;
-      // await this.sleep(10);
+      await this.sleep(10);
     }
 
     this.btnDisabled = false;
@@ -61,9 +61,9 @@ export class MergeSortComponent implements OnInit {
 
 
   async sortArray() {
-    this.btnDisabled = false;
+    this.btnDisabled = true;
     await this.mergeSort(this.numberArray, 0, this.numberArray.length - 1).then(() => {
-      this.shuffleArray(this.numberArray);
+      this.btnDisabled = false;
       this.midIndex = -1;
       console.log("Finished Sorting");
     })

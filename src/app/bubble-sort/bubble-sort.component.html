@@ -1,16 +1,16 @@
 <mat-toolbar>
-  <mat-toolbar-row class="toolbar">
+  <mat-toolbar-row class="toolbar" [class.mat-elevation-z6]="true">
     <span id="heading">Sorting Visualizer</span>
   </mat-toolbar-row>
 
   <mat-toolbar-row class="secondRow">
     <div class="actionBtn">
       <span>
-        <button mat-raised-button color="accent" (click)="sortArray()">Sort</button>
+        <button mat-raised-button color="accent" (click)="sortArray()" [disabled]="btnDisabled">Sort</button>
       </span>
 
       <span>
-        <button mat-raised-button color="accent" (click)="shuffle()">Shuffle</button>
+        <button mat-raised-button color="accent" (click)="shuffle()" [disabled]="btnDisabled">Shuffle</button>
       </span>
     </div>
 
@@ -25,6 +25,12 @@
 
   </mat-toolbar-row>
 </mat-toolbar>
+<div class="info">
+  <p>Best case Time Complexity: </p>
+  <p>O(n)</p>
+  <p>Worst Case Time Complexity: </p>
+  <p>O(n ^ 2)</p>
+</div>
 <div class="container">
   <main>
     <div class="block-container">

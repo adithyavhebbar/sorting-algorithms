@@ -13,7 +13,7 @@
   align-items: flex-end;
   margin: 0%;
   height: calc(82vh - 5px);
-  width: calc(94rem + 14px);
+  width: calc(94rem + 10px);
 }
 
 main {
@@ -89,4 +89,12 @@ mat-slider {
 
 .algoLink>a {
   margin: 20px;
+}
+
+.info {
+  background-color: #121212;
+  color: white;
+  position: absolute;
+  left: 100px;
+  top: 150px;
 }

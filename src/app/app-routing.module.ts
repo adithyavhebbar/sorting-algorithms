@@ -13,7 +13,8 @@ const routes: Routes = [
   { path: 'selection-sort', component: SelectionSortComponent },
   { path: 'quick-sort', component: QuickSortComponent },
   { path: 'insertion-sort', component: InsertionSortComponent },
-  { path: 'merge-sort', component: MergeSortComponent }
+  { path: 'merge-sort', component: MergeSortComponent },
+  { path: '**', redirectTo: '/quick-sort', pathMatch: 'full' }
 ];
 
 @NgModule({

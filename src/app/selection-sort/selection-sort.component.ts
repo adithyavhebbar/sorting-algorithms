@@ -21,7 +21,7 @@ export class SelectionSortComponent implements OnInit {
 
   }
 
-  shuffle() {
+  async shuffle() {
     this.btnDisabled = true;
 
     for (var i = this.numberArray.length - 1; i > 0; i--) {
@@ -29,7 +29,7 @@ export class SelectionSortComponent implements OnInit {
       var temp = this.numberArray[i];
       this.numberArray[i] = this.numberArray[j];
       this.numberArray[j] = temp;
-      // await this.sleep(10);
+      await this.sleep(10);
     }
 
     this.btnDisabled = false;
@@ -44,7 +44,7 @@ export class SelectionSortComponent implements OnInit {
       var temp = array[i];
       array[i] = array[j];
       array[j] = temp;
-      // await this.sleep(10);
+      await this.sleep(10);
     }
 
     this.btnDisabled = false;
@@ -67,12 +67,12 @@ export class SelectionSortComponent implements OnInit {
 
 
   async sortArray() {
-    this.btnDisabled = false;
+    this.btnDisabled = true;
     this.selectionSort(this.numberArray).then(() => {
       this.pivotIndex = -1;
       console.log("Finished");
-      // this.shuffleArray(this.numberArray);
-    })
+      this.btnDisabled = false;
+    });
   }
 
   async selectionSort(arr: number[]): Promise<void> {

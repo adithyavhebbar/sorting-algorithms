@@ -90,3 +90,10 @@ mat-slider {
 .algoLink>a {
   margin: 20px;
 }
+.info {
+  background-color: #121212;
+  color: white;
+  position: absolute;
+  left: 100px;
+  top: 150px;
+}

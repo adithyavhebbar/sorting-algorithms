@@ -21,7 +21,7 @@ export class BubbleSortComponent implements OnInit {
 
   }
 
-  shuffle() {
+  async shuffle(): Promise<void> {
     this.btnDisabled = true;
 
     for (var i = this.numberArray.length - 1; i > 0; i--) {
@@ -29,7 +29,7 @@ export class BubbleSortComponent implements OnInit {
       var temp = this.numberArray[i];
       this.numberArray[i] = this.numberArray[j];
       this.numberArray[j] = temp;
-      // await this.sleep(10);
+      await this.sleep(10);
     }
 
     this.btnDisabled = false;
@@ -44,7 +44,7 @@ export class BubbleSortComponent implements OnInit {
       var temp = array[i];
       array[i] = array[j];
       array[j] = temp;
-      // await this.sleep(10);
+      await this.sleep(10);
     }
 
     this.btnDisabled = false;
@@ -67,11 +67,11 @@ export class BubbleSortComponent implements OnInit {
 
 
   async sortArray() {
-    this.btnDisabled = false;
+    this.btnDisabled = true;
     this.bubbleSort(this.numberArray).then(() => {
       this.pivotIndex = -1;
+      this.btnDisabled = false
       console.log("Finished");
-      // this.shuffleArray(this.numberArray);
     })
   }
 
