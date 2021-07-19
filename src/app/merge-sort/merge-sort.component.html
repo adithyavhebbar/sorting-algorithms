@@ -34,10 +34,7 @@
 <div class="container">
   <main>
     <div class="block-container">
-      <div *ngFor="let k of numberArray;let i = index" [ngStyle]="{'background-color': i >= lowIndex && i < midIndex ? 'yellow' :'cyan', 'background-color' : i <
-          highIndex && i> pivotIndex+1 ? 'purple' :'cyan', height: getHeightofDiv(k), 'background-color': i === midIndex
-          ? 'red' :'cyan'}" class="block">
-        <!-- {{i}} -->
+      <div *ngFor="let k of numberArray;let i = index" [ngStyle]="{height: getHeightofDiv(k), 'background-color': i === midIndex ? 'red' :'cyan'}" class="block">
       </div>
     </div>
   </main>

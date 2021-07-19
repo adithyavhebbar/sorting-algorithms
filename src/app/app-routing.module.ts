@@ -8,17 +8,17 @@ import { SelectionSortComponent } from './selection-sort/selection-sort.componen
 
 
 const routes: Routes = [
-  { path: '', redirectTo: '/quick-sort', pathMatch: 'full' },
   { path: 'bubble-sort', component: BubbleSortComponent },
   { path: 'selection-sort', component: SelectionSortComponent },
   { path: 'quick-sort', component: QuickSortComponent },
   { path: 'insertion-sort', component: InsertionSortComponent },
   { path: 'merge-sort', component: MergeSortComponent },
-  { path: '**', redirectTo: '/quick-sort', pathMatch: 'full' }
+  { path: '', redirectTo: 'quick-sort', pathMatch: 'full' },
+  { path: '**', redirectTo: 'quick-sort', pathMatch: 'full' }
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, {useHash: true})],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

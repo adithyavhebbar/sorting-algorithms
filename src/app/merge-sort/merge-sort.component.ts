@@ -114,21 +114,21 @@ export class MergeSortComponent implements OnInit {
       }
       k++;
     }
-    // await this.sleep(10);
+    await this.sleep(2);
 
     while (i < n1) {
       arr[k] = L[i];
       k++;
       i++;
     }
-    // await this.sleep(10);
+    await this.sleep(2);
 
     while (j < n2) {
       arr[k] = R[j];
       j++;
       k++;
     }
-    await this.sleep(10);
+    await this.sleep(2);
 
   }
 
