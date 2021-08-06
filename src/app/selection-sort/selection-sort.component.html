@@ -20,6 +20,7 @@
 
       <a mat-stroked-button color="accent" routerLink="/insertion-sort">Insertion Sort</a>
       <a mat-stroked-button color="accent" routerLink="/bubble-sort">Bubble Sort</a>
+      <a mat-stroked-button color="accent" routerLink="/heap-sort">Heap Sort</a>
 
     </div>
 
@@ -35,8 +36,7 @@
   <main>
     <div class="block-container">
       <div *ngFor="let k of numberArray;let i = index"
-        [ngStyle]="{height: getHeightofDiv(k), 'background-color': i === pivotIndex ? 'red' :'cyan'}"
-        class="block">
+        [ngStyle]="{height: getHeightofDiv(k), 'background-color': i === pivotIndex ? 'red' :'cyan'}" class="block">
         <!-- {{i}} -->
       </div>
     </div>
